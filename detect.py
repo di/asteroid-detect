@@ -100,7 +100,7 @@ print "<h1>Automatic Asteroid Detection & Verifier</h1>A random image from the <
 print clusterdivs
 print "<br/>Are any of these asteroids? <a href=\"valid.py\">Click here for some examples if you're unsure.</a><br/>"
 print "<br/><form method='post' action='./detect.py'><div style='width:992px'>" + bigclusterdivs + "<div style='clear:both'></div></div><br/><input type='submit' value='None of these are Asteroids'><input type='submit' value='Verify Checked Asteroids'></form>"
-print "<br/>Run:" + str(run) + ", Camcol:" + str(camcol) + ", Field:" + str(field) + "\n<br/>Original Image:<a href=\"" + url0 + "\">" + url0 + "</a><br/>" + "Permalink to this page: <a href=\"" + "./detect.py?R=" + str(run) + "&C=" + str(camcol) + "&F=" + str(field) + "\">link</a><br/>"
+print "<br/>Run: " + str(run) + ", Camcol: " + str(camcol) + ", Field:  " + str(field) + "\n<br/>Original Image: <a href=\"" + url0 + "\">" + url0 + "</a><br/>" + "Permalink to this page: <a href=\"" + "./detect.py?R=" + str(run) + "&C=" + str(camcol) + "&F=" + str(field) + "\">link</a><br/>"
 print "<br/>Created by <a href=\"mailto:dsi23@drexel.edu\">Dustin Ingram</a> and <a href=\"mailto:ar374@drexel.edu\">Aaron Rosenfeld</a>"
 print "</div>"
 print "</html>"
