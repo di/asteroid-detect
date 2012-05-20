@@ -6,4 +6,4 @@ A series of proof-of-concept tools to automaticaly detect asteroids in satellite
 * `process.py` -- Processes a new image from the SDSS, and stores it's results in the DB to be verified
 * `valid.py` -- A display of all user-validated images, plus some stats.
 
-A demo is available at http://dustingram.com/misc/astro/valid.py
+A demo is available at http://misc.dustingram.com/astro/valid.py
