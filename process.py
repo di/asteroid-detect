@@ -26,12 +26,6 @@ def isMajority(c, c1, c2, min_dif) :
         return True
     return False
 
-def pointInRect(p, x1, y1, x2, y2) :
-    x, y = p
-    if x >= x1 and x <= x2 and y >= y1 and y <= y2 :
-        return True
-    return False
-
 def getImage(url):
     return Image.open(cStringIO.StringIO(urllib.urlopen(url).read()))
 
@@ -106,16 +100,6 @@ def findPairs(finds, max_dist = 10) :
                 points.append( ((x_g + x_b)/2, (y_g + y_b)/2) )
     return points
 
-    '''points = []
-    for f_g in finds['g'] :
-        for f_b in finds['b'] :
-            x_g, y_g = f_g
-            x_b, y_b = f_b
-            if distance(f_b, f_g) < max_dist :
-                points.append( ((x_g + x_b)/2, (y_g + y_b)/2) )
-                break
-    return points'''
-
 def cluster(points, cluster_width = 20) :
     clusters = {}
     while len(points) > 0 :
@@ -145,19 +129,7 @@ def filterClusters(im, clusters, max_brights = 10) :
     w, h = im.size
     pixels = im.load()
     scan = 20
-    '''for k in clusters.keys() :
-        x, y = k
-        brights = 0
-        for xi in range(max(0, x - scan), min(w, x + scan), 2) :
-            if brights > max_brights :
-                break
-            for yi in range(max(0, y - scan), min(h, y + scan), 2) :
-                if pixels[xi, yi][0] > 120 and pixels[xi, yi][1] > 120 and pixels[xi, yi][2] > 120 :
-                    brights += 1
-                    if brights > max_brights :
-                        break
-        if brights > max_brights :
-            del ret[k]'''
+
     for k in clusters.keys() :
         center = k
         bright = 0
